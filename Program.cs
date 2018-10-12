@@ -8,7 +8,10 @@ namespace DotnetCoreTikTakToe
         {
             var game = new TiKTakToe();
             game.Intro();
+            while (true)
+            {
             game.Draw();
+            }
         }
     }
 
@@ -20,6 +23,7 @@ namespace DotnetCoreTikTakToe
     class TiKTakToe
     {
         private char[] coordinates { get; set; }
+        private string currentStep { get; set; }
 
         public TiKTakToe() {
             coordinates = new char[9] {
@@ -31,6 +35,7 @@ namespace DotnetCoreTikTakToe
 
         public void Draw()
         {
+            Console.Clear();
             Console.WriteLine("Player 1: X    Player 2: O\n\n");
             Console.WriteLine("   --- --- --- ");
             Console.WriteLine("3 | {0} | {1} | {2} |", coordinates[0], coordinates[1], coordinates[2]);
@@ -41,11 +46,13 @@ namespace DotnetCoreTikTakToe
             Console.WriteLine("   --- --- --- ");
             Console.WriteLine("    a   b   c\n\n");
             Console.WriteLine("Player 1's turn!");
-            Console.WriteLine("Enter coordinate: ");
+            Console.Write("Enter coordinate: ");
+            currentStep = Console.ReadLine();
         }
 
         public void Intro()
         {
+            Console.Clear();
             Console.WriteLine("Hello to a Tik-Tak-Toe Game");
             Console.WriteLine("Press enter key to continue");
             Console.ReadLine();
