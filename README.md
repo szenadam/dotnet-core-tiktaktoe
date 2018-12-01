@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/szenadam/dotnet-core-tiktaktoe.svg?branch=master)](https://travis-ci.com/szenadam/dotnet-core-tiktaktoe)
 Tik-Tak-Toe game in Dotnet Core
 ===============================
 
