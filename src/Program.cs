@@ -6,12 +6,7 @@ namespace DotnetCoreTikTakToe
     {
         static void Main(string[] args)
         {
-            var game = new TiKTakToe();
-            game.Intro();
-            while (true)
-            {
-            game.Draw();
-            }
+            
         }
     }
 }

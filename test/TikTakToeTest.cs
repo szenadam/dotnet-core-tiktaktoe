@@ -1,14 +1,15 @@
 using System;
 using Xunit;
+using DotnetCoreTikTakToe;
 
 namespace test
 {
-    public class UnitTest1
+    public class TikTakToeTest
     {
         [Fact]
         public void Test1()
         {
-
+            var game = new TiKTakToe();
         }
     }
 }
