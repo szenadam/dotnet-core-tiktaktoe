@@ -4,10 +4,10 @@ namespace DotnetCoreTikTakToe
 {
     public class TiKTakToe
     {
-        public int[,] coordinates { get; set; }
+        public int[,] board { get; set; }
         public TiKTakToe()
         {
-            this.coordinates = new int[3, 3];
+            this.board = new int[3, 3];
             this.initBoard();
         }
 
@@ -16,7 +16,7 @@ namespace DotnetCoreTikTakToe
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    this.coordinates[i, j] = 0;
+                    this.board[i, j] = 0;
                 }
             }
         }
@@ -32,7 +32,13 @@ namespace DotnetCoreTikTakToe
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Console.Write(this.coordinates[i,j] + " ");
+                    if (this.board[i,j] == 1) {
+                        Console.Write("X ");
+                    } else if (this.board[i,j] == 1) {
+                        Console.Write("O ");
+                    } else {
+                        Console.Write("0 ");
+                    }
                 }
                 Console.WriteLine();
             }
