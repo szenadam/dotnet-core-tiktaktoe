@@ -14,7 +14,7 @@ namespace test
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Assert.Equal(0, game.coordinates[i, j]);
+                    Assert.Equal(0, game.board[i, j]);
                 }
             }
         }
