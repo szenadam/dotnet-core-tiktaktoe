@@ -25,5 +25,12 @@ namespace test
             var game = new TiKTakToe();
             game.intro();
         }
+
+         [Fact]
+        public void Test_PrintBoard()
+        {
+            var game = new TiKTakToe();
+            game.printBoard();
+        }
     }
 }
