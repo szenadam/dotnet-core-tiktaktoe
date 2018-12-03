@@ -20,5 +20,11 @@ namespace DotnetCoreTikTakToe
                 }
             }
         }
+
+        public void intro() {
+            Console.Clear();
+            Console.WriteLine("Tik-Tak-Toke game");
+            Console.WriteLine("-----------------");
+        }
     }
 }

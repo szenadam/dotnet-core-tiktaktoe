@@ -14,9 +14,16 @@ namespace test
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Assert.Equal(game.coordinates[i, j], 0);
+                    Assert.Equal(0, game.coordinates[i, j]);
                 }
             }
+        }
+
+        [Fact]
+        public void Test_Intro()
+        {
+            var game = new TiKTakToe();
+            game.intro();
         }
     }
 }
