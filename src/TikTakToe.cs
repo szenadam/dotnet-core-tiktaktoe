@@ -48,18 +48,18 @@ namespace DotnetCoreTikTakToe
             this.board[x,y] = value;
         }
 
-        public bool chekcWin() {
+        public bool chekcWin(int playerSymbol) {
             // Horizontal
-            if (this.board[0,0] == 0 && this.board[0,1] == 0 && this.board[0,2] == 0) return true;
-            if (this.board[1,0] == 0 && this.board[1,1] == 0 && this.board[1,2] == 0) return true;
-            if (this.board[2,0] == 0 && this.board[2,1] == 0 && this.board[2,2] == 0) return true;
+            if (this.board[0,0] == playerSymbol && this.board[0,1] == playerSymbol && this.board[0,2] == playerSymbol) return true;
+            if (this.board[1,0] == playerSymbol && this.board[1,1] == playerSymbol && this.board[1,2] == playerSymbol) return true;
+            if (this.board[2,0] == playerSymbol && this.board[2,1] == playerSymbol && this.board[2,2] == playerSymbol) return true;
             // Vertical
-            if (this.board[0,0] == 0 && this.board[1,0] == 0 && this.board[2,0] == 0) return true;
-            if (this.board[0,1] == 0 && this.board[1,1] == 0 && this.board[2,1] == 0) return true;
-            if (this.board[0,2] == 0 && this.board[1,2] == 0 && this.board[2,2] == 0) return true;
+            if (this.board[0,0] == playerSymbol && this.board[1,0] == playerSymbol && this.board[2,0] == playerSymbol) return true;
+            if (this.board[0,1] == playerSymbol && this.board[1,1] == playerSymbol && this.board[2,1] == playerSymbol) return true;
+            if (this.board[0,2] == playerSymbol && this.board[1,2] == playerSymbol && this.board[2,2] == playerSymbol) return true;
             // Diagonal
-            if (this.board[0,0] == 0 && this.board[1,1] == 0 && this.board[2,2] == 0) return true;
-            if (this.board[0,2] == 0 && this.board[1,1] == 0 && this.board[2,0] == 0) return true;
+            if (this.board[0,0] == playerSymbol && this.board[1,1] == playerSymbol && this.board[2,2] == playerSymbol) return true;
+            if (this.board[0,2] == playerSymbol && this.board[1,1] == playerSymbol && this.board[2,0] == playerSymbol) return true;
 
             return false;
         }
