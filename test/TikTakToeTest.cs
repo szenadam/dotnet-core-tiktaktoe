@@ -70,5 +70,35 @@ namespace test
             game.makeStep(2, 2, 1);
             Assert.True(game.chekcWin());
         }
+
+        [Fact]
+        public void Test_CheckWin_FirstVertical() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(0, 0, 1);
+            game.makeStep(1, 0, 1);
+            game.makeStep(2, 0, 1);
+            Assert.True(game.chekcWin());
+        }
+
+        [Fact]
+        public void Test_CheckWin_SecondVertical() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(0, 1, 1);
+            game.makeStep(1, 1, 1);
+            game.makeStep(2, 1, 1);
+            Assert.True(game.chekcWin());
+        }
+
+        [Fact]
+        public void Test_CheckWin_ThirdVertical() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(0, 2, 1);
+            game.makeStep(1, 2, 1);
+            game.makeStep(2, 2, 1);
+            Assert.True(game.chekcWin());
+        }
     }
 }
