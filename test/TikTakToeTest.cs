@@ -32,5 +32,14 @@ namespace test
             var game = new TiKTakToe();
             game.printBoard();
         }
+
+        [Fact]
+        public void Test_MakeStep() 
+        {
+            var game = new TiKTakToe();
+            game.initBoard();
+            game.makeStep(0, 0, 1);
+            Assert.Equal(1, game.board[0,0]);
+        }
     }
 }

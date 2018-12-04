@@ -11,7 +11,7 @@ namespace DotnetCoreTikTakToe
             this.initBoard();
         }
 
-        private void initBoard() {
+        public void initBoard() {
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -42,6 +42,10 @@ namespace DotnetCoreTikTakToe
                 }
                 Console.WriteLine();
             }
+        }
+
+        public void makeStep(int x, int y, int value) {
+            this.board[x,y] = value;
         }
     }
 }
