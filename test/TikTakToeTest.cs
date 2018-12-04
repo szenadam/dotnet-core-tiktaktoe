@@ -100,5 +100,25 @@ namespace test
             game.makeStep(2, 2, 1);
             Assert.True(game.chekcWin(1));
         }
+
+        [Fact]
+        public void Test_CheckWin_MainDiagonal() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(0, 0, 1);
+            game.makeStep(1, 1, 1);
+            game.makeStep(2, 2, 1);
+            Assert.True(game.chekcWin(1));
+        }
+
+        [Fact]
+        public void Test_CheckWin_SecondaryDiagonal() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(0, 2, 1);
+            game.makeStep(1, 1, 1);
+            game.makeStep(2, 0, 1);
+            Assert.True(game.chekcWin(1));
+        }
     }
 }
