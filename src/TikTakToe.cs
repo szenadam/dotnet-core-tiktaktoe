@@ -5,9 +5,21 @@ namespace DotnetCoreTikTakToe
     public class TiKTakToe
     {
         public int[,] board { get; set; }
+        public char playerOneSymbol {get; set; }
+        public char playerTwoSymbol {get; set; }
+
         public TiKTakToe()
         {
             this.board = new int[3, 3];
+            this.playerOneSymbol = 'X';
+            this.playerTwoSymbol = 'O';
+            this.initBoard();
+        }
+        public TiKTakToe(char playerOneSymbol, char playerTwoSymbol)
+        {
+            this.board = new int[3, 3];
+            this.playerOneSymbol = playerOneSymbol;
+            this.playerTwoSymbol = playerTwoSymbol;
             this.initBoard();
         }
 
@@ -33,9 +45,9 @@ namespace DotnetCoreTikTakToe
                 for (int j = 0; j < 3; j++)
                 {
                     if (this.board[i,j] == 1) {
-                        Console.Write("X ");
+                        Console.Write(playerOneSymbol + " ");
                     } else if (this.board[i,j] == 2) {
-                        Console.Write("O ");
+                        Console.Write(playerTwoSymbol + " ");
                     } else {
                         Console.Write("0 ");
                     }
