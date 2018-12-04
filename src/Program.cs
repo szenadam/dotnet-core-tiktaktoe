@@ -9,6 +9,16 @@ namespace DotnetCoreTikTakToe
             var game = new TiKTakToe();
             game.intro();
             game.printBoard();
+
+            int x, y;
+
+            while (true)
+            {
+                x = int.Parse(Console.ReadLine());
+                y = int.Parse(Console.ReadLine());
+                game.makeStep(x,y, 1);
+                game.printBoard();
+            }
         }
     }
 }
