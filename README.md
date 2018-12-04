@@ -7,4 +7,7 @@ Tik-Tak-Toe game in Dotnet Core
 
 ## Run
  - `$ dotnet restore`
- - `$ dotnet run`
+ - `$ dotnet run -p .\src\`
+
+## Test
+ - `$ dotnet test`
