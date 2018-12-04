@@ -11,7 +11,7 @@ namespace DotnetCoreTikTakToe
             this.initBoard();
         }
 
-        public void initBoard() {
+        private void initBoard() {
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -34,7 +34,7 @@ namespace DotnetCoreTikTakToe
                 {
                     if (this.board[i,j] == 1) {
                         Console.Write("X ");
-                    } else if (this.board[i,j] == 1) {
+                    } else if (this.board[i,j] == 2) {
                         Console.Write("O ");
                     } else {
                         Console.Write("0 ");
@@ -46,6 +46,22 @@ namespace DotnetCoreTikTakToe
 
         public void makeStep(int x, int y, int value) {
             this.board[x,y] = value;
+        }
+
+        public bool chekcWin() {
+            // Horizontal
+            if (this.board[0,0] == 0 && this.board[0,1] == 0 && this.board[0,2] == 0) return true;
+            if (this.board[1,0] == 0 && this.board[1,1] == 0 && this.board[2,2] == 0) return true;
+            if (this.board[2,0] == 0 && this.board[2,1] == 0 && this.board[3,2] == 0) return true;
+            // Vertical
+            if (this.board[0,0] == 0 && this.board[0,1] == 0 && this.board[0,2] == 0) return true;
+            if (this.board[1,0] == 0 && this.board[1,1] == 0 && this.board[1,2] == 0) return true;
+            if (this.board[2,0] == 0 && this.board[1,1] == 0 && this.board[2,2] == 0) return true;
+            // Diagonal
+            if (this.board[0,0] == 0 && this.board[1,1] == 0 && this.board[2,2] == 0) return true;
+            if (this.board[0,2] == 0 && this.board[1,1] == 0 && this.board[2,0] == 0) return true;
+
+            return false;
         }
     }
 }

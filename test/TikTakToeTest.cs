@@ -37,9 +37,38 @@ namespace test
         public void Test_MakeStep() 
         {
             var game = new TiKTakToe();
-            game.initBoard();
             game.makeStep(0, 0, 1);
             Assert.Equal(1, game.board[0,0]);
+        }
+
+        [Fact]
+        public void Test_CheckWin_FirstHorizontal() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(0, 0, 1);
+            game.makeStep(0, 1, 1);
+            game.makeStep(0, 2, 1);
+            Assert.True(game.chekcWin());
+        }
+
+        [Fact]
+        public void Test_CheckWin_SecondHorizontal() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(1, 0, 1);
+            game.makeStep(1, 1, 1);
+            game.makeStep(1, 2, 1);
+            Assert.True(game.chekcWin());
+        }
+
+        [Fact]
+        public void Test_CheckWin_ThirdHorizontal() 
+        {
+            var game = new TiKTakToe();
+            game.makeStep(2, 0, 1);
+            game.makeStep(2, 1, 1);
+            game.makeStep(2, 2, 1);
+            Assert.True(game.chekcWin());
         }
     }
 }
