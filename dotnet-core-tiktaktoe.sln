@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-core-tiktaktoe", "src\dotnet-core-tiktaktoe.csproj", "{87F99279-9797-48B9-A4AD-D44D166FD95C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCoreTikTakToe", "src\DotnetCoreTikTakToe.csproj", "{87F99279-9797-48B9-A4AD-D44D166FD95C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{AE36E489-72DC-4210-BE11-9F288503D2FD}"
 EndProject
