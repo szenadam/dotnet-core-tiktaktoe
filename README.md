@@ -13,7 +13,7 @@ A simple Tic-Tac-Toe game that can be played in the console.
 ## Run
 
 - `$ dotnet restore`
-- `$ dotnet run -p .\src\`
+- `$ dotnet run -p .\TikTakToe\`
 
 ## Test
 
